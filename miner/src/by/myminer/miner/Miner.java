@@ -23,7 +23,7 @@ public class Miner extends JFrame {
   private static final int COLS = 9;
   private static final int ROWS = 9;
   private static final int BOMBS = 10;
-  private static final int IMG_SIZE = 50;
+  private static final int IMG_SIZE = 30;
 
   public static void main(String[] args) {
     new Miner();
@@ -50,7 +50,7 @@ public class Miner extends JFrame {
       protected void paintComponent(Graphics g) {
         super.paintComponent(g);
         for (Coordinates coord : Ranges.getAllCoordinates()) {
-          g.drawImage((Image) game.getBox(coord).image, coord.x * IMG_SIZE, coord.y * IMG_SIZE, this);
+          g.drawImage((Image) game.getBox(coord).image, coord.x * IMG_SIZE, coord.y * IMG_SIZE, IMG_SIZE, IMG_SIZE, this);
         }
       }
     };
